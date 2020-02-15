@@ -18,7 +18,7 @@ class IdeasTableSeeder extends Seeder
                 'title' => 'Danse de Caramelldansen',
                 'description' => 'Danser tous ensemble sur Caramelldansen.',
                 'idea_category_id' => IdeaCategory::where('name', 'IRL')->firstOrFail()->id,
-                'user_id' => User::where('name', 'Horsengel')->firstOrFail()->id
+                'user_id' => User::where('username', 'Horsengel')->firstOrFail()->id
             ]
         );
     }

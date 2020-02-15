@@ -16,14 +16,14 @@ class IdeaCategoriesTableSeeder extends Seeder
             [
                 'name' => 'IRL',
                 'description' => 'Idée d\'actvités pour les IRL.',
-                'user_id' => User::where('name', 'Horsengel')->firstOrFail()->id
+                'user_id' => User::where('username', 'Horsengel')->firstOrFail()->id
             ]
         );
         App\Models\IdeaCategory::create(
             [
                 'name' => 'TTB TV',
                 'description' => 'Proposition de séries pour la TTB TV.',
-                'user_id' => User::where('name', 'Horsengel')->firstOrFail()->id
+                'user_id' => User::where('username', 'Horsengel')->firstOrFail()->id
             ]
         );
     }

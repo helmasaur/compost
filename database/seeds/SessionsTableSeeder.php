@@ -16,7 +16,7 @@ class SessionsTableSeeder extends Seeder
         App\Models\Session::create(
             [
                 'date' => Carbon::now(),
-                'user_id' => User::where('name', 'Horsengel')->firstOrFail()->id
+                'user_id' => User::where('username', 'Horsengel')->firstOrFail()->id
             ]
         );
     }

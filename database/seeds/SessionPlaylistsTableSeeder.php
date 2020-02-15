@@ -16,10 +16,10 @@ class SessionPlaylistsTableSeeder extends Seeder
     {
         App\Models\SessionPlaylist::create(
             [
-                'session_id' => Session::latest()->first()->id,
-                'episode_id' => Episode::latest()->first()->id,
+                'session_id' => Session::first()->id,
+                'episode_id' => Episode::first()->id,
                 'order' => 1,
-                'user_id' => User::where('name', 'Horsengel')->firstOrFail()->id
+                'user_id' => User::where('username', 'Horsengel')->firstOrFail()->id
             ]
         );
     }
