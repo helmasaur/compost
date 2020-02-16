@@ -11,6 +11,9 @@
 |
 */
 
-//Route::get('/', 'HomeController@index')->name('home');
 Route::get('/', 'HomeController@index')->name('home');
+Route::middleware('auth')->group(function () {
+	Route::get('planter', 'DashboardController@index')->name('dashboard');
+	Route::get('planter/{id}', 'ModuleController@index')->name('module');
+});
 Auth::routes();

@@ -3,14 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Compost</title>
+        <title>Compost – @yield('title')</title>
     </head>
     <body>
-        @guest
-            @include('auth.login')
-        @endguest
-        @auth
-            @include('auth.logout')
-        @endauth
+    @include('layout.header')
+
+		@yield('content')
+
+    @include('layout.footer')
     </body>
 </html>
