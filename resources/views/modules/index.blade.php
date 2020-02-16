@@ -1,4 +1,4 @@
-@extends('layout.base')
+@extends('layouts.base')
 
 @section('title', $module->name)
 
@@ -7,4 +7,8 @@
 		<h2>{{ $module->name }}</h2>
 		<p>{{ $module->content }}</p>
 	</main>
+
+	<aside>
+		@include('modules.shows.list')
+	</aside>
 @endsection

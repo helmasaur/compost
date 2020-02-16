@@ -6,10 +6,10 @@
         <title>Compost – @yield('title')</title>
     </head>
     <body>
-    @include('layout.header')
+    @include('layouts.header')
 
 		@yield('content')
 
-    @include('layout.footer')
+    @include('layouts.footer')
     </body>
 </html>

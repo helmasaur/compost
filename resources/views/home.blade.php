@@ -7,10 +7,10 @@
     </head>
     <body>
         @guest
-            @include('auth.login')
+            @include('auth.forms.login')
         @endguest
         @auth
-            @include('auth.logout')
+            @include('auth.forms.logout')
         @endauth
     </body>
 </html>

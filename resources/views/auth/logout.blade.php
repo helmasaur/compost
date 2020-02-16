@@ -1,4 +1,9 @@
-<form method="POST" action="{{ route('logout') }}">
-	@csrf
-	<button type="submit">Déconnexion</button>
-</form>
+@extends('layouts.base')
+
+@section('title', 'Logout')
+
+@section('content')
+	<main>
+		@include('auth.forms.logout')
+	</main>
+@endsection

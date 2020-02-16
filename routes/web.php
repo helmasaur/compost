@@ -15,5 +15,7 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::middleware('auth')->group(function () {
 	Route::get('planter', 'DashboardController@index')->name('dashboard');
 	Route::get('planter/{id}', 'ModuleController@index')->name('module');
+	Route::get('show/{id}', 'ShowController@index')->name('show');
+	Route::get('show/{showId}/episode/{episodeNo}', 'ShowController@episode')->name('episode');
 });
 Auth::routes();
